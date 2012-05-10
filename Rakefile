@@ -133,9 +133,10 @@ end
 
 desc "Validate #{gemspec_file}"
 task :validate do
-  libfiles = Dir['lib/*'] - ["lib/#{lib_name}.rb"] #, "lib/#{name}"]
+  underscored_name = name.gsub /-/, '_'
+  libfiles = Dir['lib/*'] - ["lib/#{lib_name}.rb", "lib/#{underscored_name}"]
   unless libfiles.empty?
-    puts "Directory `lib` should only contain a `#{name}.rb` file and `#{name}` dir."
+    puts "Directory `lib` should only contain a `#{underscored_name}.rb` file and `#{underscored_name}` dir."
     exit!
   end
   unless Dir['VERSION*'].empty?

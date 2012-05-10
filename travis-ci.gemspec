@@ -53,7 +53,14 @@ Gem::Specification.new do |s|
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
+    Gemfile
+    LICENSE
     README.md
+    Rakefile
+    lib/travis_ci.rb
+    lib/travis_ci/models.rb
+    lib/travis_ci/models/repository.rb
+    travis-ci.gemspec
   ]
   # = MANIFEST =
 
