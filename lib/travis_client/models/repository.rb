@@ -1,4 +1,4 @@
-module TravisCi
+module TravisClient
   module Models
     class Repository
     end
